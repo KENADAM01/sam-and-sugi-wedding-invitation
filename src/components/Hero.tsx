@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import rapunzelImg from '../assets/rapunzel-new.png'
+import flynnImg from '../assets/flynn-new.png'
 
 
 const Hero = () => {
@@ -10,7 +12,25 @@ const Hero = () => {
 
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
-            {/* Wedding Poster Image - REMOVED */}
+            {/* Character Images */}
+
+            {/* Rapunzel - Top Right */}
+            <div className={`absolute top-0 right-0 z-10 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
+                <img
+                    src={rapunzelImg}
+                    alt="Rapunzel and Pascal"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+            </div>
+
+            {/* Flynn - Bottom Left */}
+            <div className={`absolute bottom-0 -left-8 md:left-0 z-10 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
+                <img
+                    src={flynnImg}
+                    alt="Flynn Rider"
+                    className="w-full h-auto object-contain object-left-bottom drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+            </div>
 
             {/* Subtle Texture Overlay */}
             <div className="absolute inset-0 opacity-30 envelope-checkered-bg z-0 pointer-events-none" />
@@ -18,7 +38,7 @@ const Hero = () => {
             {/* Gradient Overlay for Text Readability - lighter now */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/40 z-10" />
 
-            {/* Floating Lanterns */}
+            {/* Floating Lanterns - Above Characters (z-40 vs z-10) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-40">
                 {[...Array(8)].map((_, i) => (
                     <div
