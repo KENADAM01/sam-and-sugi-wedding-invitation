@@ -45,18 +45,18 @@ const Hero = () => {
 
                 <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-8 text-shadow-soft text-rapunzel-600">
                     <span className="inline-block animate-fadeInScale" style={{ animationDelay: '0.3s' }}>
-                        Emily
+                        Samraj
                     </span>
                     <span className="inline-block mx-4 text-7xl md:text-8xl animate-fadeInScale" style={{ animationDelay: '0.5s' }}>
                         &
                     </span>
                     <span className="inline-block animate-fadeInScale" style={{ animationDelay: '0.7s' }}>
-                        James
+                        Sugithra
                     </span>
                 </h1>
 
                 <p className="font-heading text-2xl md:text-4xl font-light tracking-wider mt-8">
-                    June 15, 2026
+                    6th March 2026
                 </p>
 
                 <div className="relative w-48 h-0.5 gradient-romantic mx-auto mt-8 opacity-80">
