@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-ivory text-gray-800;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .envelope-perspective {
+    perspective: 1000px;
+  }
+
+  .envelope-checkered-bg {
+    /* Optional texture for paper */
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Responsive flap sizes using CSS variables for consistency */
+  :root {
+    --flap-width: clamp(100px, 45vw, 224px);
+    --flap-height: clamp(80px, 35vw, 150px);
+  }
+
+  .flap-top {
+    @apply w-full absolute top-0 left-0;
+    height: var(--flap-height);
+    background-color: #f5f0e6;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+  }
+
+  .flap-pocket {
+    border-style: solid;
+    border-color: transparent #e6dfd1 #ded5c5 #e6dfd1;
+    border-width: 0 var(--flap-width) var(--flap-height) var(--flap-width);
+    /* The bottom height needs to be larger to cover full envelope? 
+           Actually, for a pocket, we usually use a big border or clip path.
+           Let's stick to the previous border style which worked, but cleaner variables.
+        */
+    border-width: 0 clamp(100px, 45vw, 224px) clamp(100px, 45vw, 224px) clamp(100px, 45vw, 224px);
+  }
+
+  /* 
+       For the side/bottom flaps creating the pocket:
+       We need them to meet in the middle.
+       If we use a single div with borders, the bottom border height determines the 'V' depth.
+    */
+  .pocket-shape {
+    @apply absolute inset-0 w-full h-full;
+    background-color: #e6dfd1;
+    /* V-cut for the pocket */
+    clip-path: polygon(0 0, 50% var(--flap-height), 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@layer utilities {
+  .gradient-romantic {
+    background: linear-gradient(135deg, #a855f7 0%, #fbbf24 100%);
+  }
+
+  .gradient-animated {
+    background: linear-gradient(135deg, #9333ea 0%, #a855f7 25%, #c084fc 50%, #fbbf24 75%, #f59e0b 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .text-shadow-soft {
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .lantern-glow {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
+  }
+}
