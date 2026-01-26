@@ -4,15 +4,15 @@ const EventDetails = () => {
             icon: '💒',
             title: 'Ceremony',
             time: '4:30 PM',
-            location: "St. Mary's Cathedral",
-            address: '123 Church Street, Downtown',
+            location: "",
+            
         },
         {
             icon: '🥂',
             title: 'Reception',
             time: '6:30 PM',
-            location: 'Grand Ballroom',
-            address: '456 Celebration Avenue, City Center',
+            location: 'Thiruvottiyur Nadar Marriage Mahal',
+            address: 'S Mada St, Tirumala Avenue, Tirumalai Avenue, Tiruvottiyur',
         },
     ]
 

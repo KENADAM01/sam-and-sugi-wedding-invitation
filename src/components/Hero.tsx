@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import rapunzelImg from '../assets/rapunzel.png'
+import flynnImg from '../assets/flynn.png'
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -9,6 +11,24 @@ const Hero = () => {
 
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
+            {/* Character Images */}
+            {/* Rapunzel - Top Left */}
+            <div className={`absolute top-0 left-0 z-30 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 -translate-y-10'}`}>
+                <img
+                    src={rapunzelImg}
+                    alt="Rapunzel and Pascal"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+            </div>
+
+            {/* Flynn - Bottom Right */}
+            <div className={`absolute bottom-0 right-0 z-30 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 translate-y-10'}`}>
+                <img
+                    src={flynnImg}
+                    alt="Flynn Rider"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+            </div>
 
             {/* Subtle Texture Overlay */}
             <div className="absolute inset-0 opacity-30 envelope-checkered-bg z-0 pointer-events-none" />
