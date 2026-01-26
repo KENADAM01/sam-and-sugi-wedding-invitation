@@ -14,7 +14,7 @@ const InvitationMessage = () => {
                     </div>
 
                     <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-16">
-                        From the first ‘hello’ to a lifetime . Now, as we take our vows and promise forever to each other, we invite you to celebrate this beautiful new beginning with us. Please mark your calendar and join us as we say ‘I do’ surrounded by love, family, and friends!
+                        From the first ‘hello’ to a lifetime of ‘I love yous,’ our journey has been filled with love, laughter, and cherished moments. Now, as we take our vows and promise forever to each other, we invite you to celebrate this beautiful new beginning with us. Please mark your calendar and join us as we say ‘I do’ surrounded by love, family, and friends!
                     </p>
 
                     <div className="bg-white/60 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-xl">
