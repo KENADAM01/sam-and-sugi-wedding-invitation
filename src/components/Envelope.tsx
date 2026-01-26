@@ -28,7 +28,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     onOpen();
                 }, 500);
             }, 2500);
-        }, 800);
+        }, 500);
     };
 
     return (
@@ -43,28 +43,31 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
 
                     {/* Back of Envelope */}
                     <div
-                        className="absolute inset-0 bg-white rounded-sm"
+                        className="absolute inset-0 rounded-sm"
+                        style={{ backgroundColor: '#9582BE' }}
                     />
 
                     {/* Letter / Inside Content (Preview) */}
                     <div
-                        className="absolute inset-2 top-4 bg-white shadow-sm flex flex-col items-center justify-center p-4 text-center border border-golden-100"
+                        className="absolute inset-2 top-4 bg-white shadow-sm flex flex-col items-center justify-center p-4 text-center border border-purple-200"
                     >
                     </div>
 
                     <div className="absolute inset-0 z-10 overflow-hidden rounded-sm pointer-events-none">
                         <div
-                            className="pocket-shape shadow-md bg-white"
+                            className="pocket-shape shadow-md"
+                            style={{ backgroundColor: '#9582BE' }}
                         />
                     </div>
 
                     {/* Top Flap (The Lid) */}
                     <div
-                        className={`absolute top-0 left-0 right-0 z-20 flex justify-center origin-top transition-transform duration-700 ease-in-out ${isOpen ? '[transform:rotateX(180deg)]' : ''}`}
+                        className={`absolute top-0 left-0 right-0 z-20 flex justify-center origin-top transition-transform duration-500 ease-in-out ${isOpen ? '[transform:rotateX(180deg)]' : ''}`}
                         style={{ transformStyle: 'preserve-3d' }}
                     >
                         <div
-                            className="flap-top drop-shadow-md bg-white border-b border-gray-100"
+                            className="flap-top drop-shadow-md border-b border-purple-300"
+                            style={{ backgroundColor: '#9582BE' }}
                         />
 
                         {/* Wax Seal - Moved outside to escape clip-path */}
