@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import envelopeBg from '../assets/envelope-bg-final.jpg';
-import tangledPoster from '../assets/tangled-poster-new.jpg';
-import maximusPascalImg from '../assets/maximus-pascal.png';
-
 import sunSealImg from '../assets/sun-seal.png';
 
 interface EnvelopeProps {
@@ -11,37 +8,23 @@ interface EnvelopeProps {
 
 const Envelope = ({ onOpen }: EnvelopeProps) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isZooming, setIsZooming] = useState(false);
-    const [isFullyOpen, setIsFullyOpen] = useState(false);
 
     const handleOpen = () => {
         console.log("Envelope clicked!");
         setIsOpen(true);
 
-        // Wait for flap to open fully (700ms transition), then zoom out the letter
+        // Wait for flap to open, then transition to main page
         setTimeout(() => {
-            setIsZooming(true);
-
-            // Hold the zoomed image for a bit
-            setTimeout(() => {
-                setIsFullyOpen(true);
-
-                // Finally signal to parent to unmount
-                setTimeout(() => {
-                    onOpen();
-                }, 1000);
-            }, 3000); // Increased hold time
-        }, 800); // Increased wait for flap
+            onOpen();
+        }, 1500);
     };
-
-    if (isFullyOpen && false) return null;
 
     return (
         <div
-            className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000 ${isFullyOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000`}
             style={{ backgroundImage: `url(${envelopeBg})` }}
         >
-            <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective ${isFullyOpen ? 'translate-y-[100vh]' : ''} ${isZooming ? 'opacity-0' : 'opacity-100'}`}>
+            <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective`}>
 
                 {/* Envelope Container */}
                 <div className="relative w-full h-full shadow-2xl">
@@ -95,26 +78,6 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         </button>
                     </div>
                 </div>
-            </div>
-
-            {/* Maximus & Pascal - Center Right Edge */}
-            <div className={`fixed right-0 top-1/2 -translate-y-1/2 z-[60] w-48 md:w-72 lg:w-96 transition-opacity duration-1000 ${isZooming || isFullyOpen ? 'opacity-0' : 'opacity-100'}`}>
-                <img
-                    src={maximusPascalImg}
-                    alt="Maximus and Pascal"
-                    className="w-full h-auto object-contain drop-shadow-2xl"
-                />
-            </div>
-
-            {/* Zooming Poster Overlay - Moved to end */}
-            <div
-                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white transition-all duration-1000 ease-in-out ${isZooming ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-[20vh] pointer-events-none'}`}
-            >
-                <img
-                    src={tangledPoster}
-                    alt="Wedding Poster"
-                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
-                />
             </div>
         </div>
     );
