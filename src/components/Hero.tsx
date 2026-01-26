@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import weddingPoster from '../assets/wedding-poster.jpg'
+
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -10,14 +10,7 @@ const Hero = () => {
 
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
-            {/* Wedding Poster Image */}
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                <img
-                    src={weddingPoster}
-                    alt="Wedding of Samraj & Sugirtha"
-                    className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-lg"
-                />
-            </div>
+            {/* Wedding Poster Image - REMOVED */}
 
             {/* Subtle Texture Overlay */}
             <div className="absolute inset-0 opacity-30 envelope-checkered-bg z-0 pointer-events-none" />
