@@ -10,7 +10,7 @@ const Location = () => {
         <section className="py-20 md:py-32 bg-gradient-to-b from-rapunzel-100/90 to-ivory/95">
             <div className="container mx-auto px-4">
                 <h2 className="font-heading text-4xl md:text-6xl font-semibold text-rapunzel-700 text-center mb-8">
-                    The Location
+                    Reception Location
                 </h2>
 
                 <div className="relative w-24 h-0.5 gradient-romantic mx-auto mb-10">
