@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import envelopeBg from '../assets/envelope-bg-final.jpg';
+import tangledPoster from '../assets/tangled-poster-new.jpg';
 import sunSealImg from '../assets/sun-seal.png';
 
 interface EnvelopeProps {
@@ -8,15 +9,26 @@ interface EnvelopeProps {
 
 const Envelope = ({ onOpen }: EnvelopeProps) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isZooming, setIsZooming] = useState(false);
 
     const handleOpen = () => {
         console.log("Envelope clicked!");
         setIsOpen(true);
 
-        // Wait for flap to open, then transition to main page
+        // Wait for flap to open, then zoom in the poster
         setTimeout(() => {
-            onOpen();
-        }, 1500);
+            setIsZooming(true);
+
+            // Hold for 2.5 seconds, then fade and transition
+            setTimeout(() => {
+                setIsZooming(false);
+
+                // Transition to main page after fade
+                setTimeout(() => {
+                    onOpen();
+                }, 500);
+            }, 2500);
+        }, 800);
     };
 
     return (
@@ -78,6 +90,17 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         </button>
                     </div>
                 </div>
+            </div>
+
+            {/* Zooming Poster Overlay */}
+            <div
+                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white transition-all duration-700 ease-in-out ${isZooming ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'}`}
+            >
+                <img
+                    src={tangledPoster}
+                    alt="Wedding Poster"
+                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
+                />
             </div>
         </div>
     );
