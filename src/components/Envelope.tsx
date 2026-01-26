@@ -44,7 +44,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     {/* Back of Envelope */}
                     <div
                         className="absolute inset-0 rounded-xl"
-                        style={{ backgroundColor: '#9582BE' }}
+                        style={{ backgroundColor: '#D6C8FF' }}
                     />
 
                     {/* Letter / Inside Content (Preview) */}
@@ -56,7 +56,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     <div className="absolute inset-0 z-10 overflow-hidden rounded-xl pointer-events-none">
                         <div
                             className="pocket-shape shadow-md"
-                            style={{ backgroundColor: '#9582BE' }}
+                            style={{ backgroundColor: '#D6C8FF' }}
                         />
                     </div>
 
@@ -67,7 +67,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     >
                         <div
                             className="flap-top drop-shadow-md border-b border-purple-300"
-                            style={{ backgroundColor: '#9582BE' }}
+                            style={{ backgroundColor: '#D6C8FF' }}
                         />
 
                         {/* Wax Seal - Moved outside to escape clip-path */}
