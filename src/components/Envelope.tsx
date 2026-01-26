@@ -70,7 +70,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             }}
                         >
                             <div className="absolute inset-0 rounded-full border border-white/20" />
-                            <span className="font-display text-2xl text-golden-200">E&J</span>
+                            <span className="font-display text-2xl text-golden-200">S&S</span>
                         </button>
                     </div>
 
