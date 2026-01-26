@@ -10,27 +10,48 @@ interface EnvelopeProps {
 
 const Envelope = ({ onOpen }: EnvelopeProps) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isZooming, setIsZooming] = useState(false);
     const [isFullyOpen, setIsFullyOpen] = useState(false);
 
     const handleOpen = () => {
         console.log("Envelope clicked!");
         setIsOpen(true);
+
+        // Wait for flap to open, then zoom out the letter
         setTimeout(() => {
-            setIsFullyOpen(true);
+            setIsZooming(true);
+
+            // Wait for user to see the zoomed letter, then fade everything
             setTimeout(() => {
-                onOpen();
-            }, 800);
-        }, 800);
+                setIsFullyOpen(true);
+
+                // Finally signal to parent to unmount
+                setTimeout(() => {
+                    onOpen();
+                }, 1000);
+            }, 2500);
+        }, 600);
     };
 
     if (isFullyOpen && false) return null;
 
     return (
         <div
-            className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-all duration-1000 ${isFullyOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000 ${isFullyOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
             style={{ backgroundImage: `url(${envelopeBg})` }}
         >
-            <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective ${isFullyOpen ? 'translate-y-[100vh]' : ''}`}>
+            {/* Zooming Poster Overlay */}
+            <div
+                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-1000 ease-in-out ${isZooming ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-[20vh] pointer-events-none'}`}
+            >
+                <img
+                    src={tangledPoster}
+                    alt="Wedding Poster"
+                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
+                />
+            </div>
+
+            <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective ${isFullyOpen ? 'translate-y-[100vh]' : ''} ${isZooming ? 'opacity-0' : 'opacity-100'}`}>
 
                 {/* Envelope Container */}
                 <div className="relative w-full h-full shadow-2xl">
