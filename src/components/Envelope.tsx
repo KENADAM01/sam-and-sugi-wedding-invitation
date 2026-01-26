@@ -77,7 +77,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                                 className="w-full h-full object-contain drop-shadow-2xl animate-pulse-slow"
                             />
                             <span
-                                className="absolute font-display text-2xl md:text-3xl font-bold drop-shadow-md pt-1"
+                                className="absolute font-display text-3xl md:text-4xl font-bold drop-shadow-md pt-1"
                                 style={{ color: '#7c3aed' }}
                             >
                                 S&S
