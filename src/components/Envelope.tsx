@@ -99,7 +99,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
             </div>
 
             {/* Maximus & Pascal - Center Right Edge */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-48 md:w-72 lg:w-96">
+            <div className={`fixed right-0 top-1/2 -translate-y-1/2 z-30 w-48 md:w-72 lg:w-96 transition-opacity duration-1000 ${isZooming ? 'opacity-0' : 'opacity-100'}`}>
                 <img
                     src={maximusPascalImg}
                     alt="Maximus and Pascal"
