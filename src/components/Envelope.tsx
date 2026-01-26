@@ -2,6 +2,8 @@ import { useState } from 'react';
 import watercolorBg from '../assets/watercolor-bg.jpg';
 import coupleImg from '../assets/couple-illustration.png';
 
+import sunSealImg from '../assets/sun-seal.png';
+
 interface EnvelopeProps {
     onOpen: () => void;
 }
@@ -63,17 +65,16 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
                             onClick={handleOpen}
-                            className={`absolute left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center shadow-lg border-4 border-red-900/30 cursor-pointer hover:scale-105 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            className={`absolute left-1/2 -translate-x-1/2 w-24 h-24 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                             style={{
                                 top: 'var(--flap-height)', /* Position at the bottom of the flap height */
-                                marginTop: '-32px' /* Center on the tip */
+                                marginTop: '-48px' /* Center on the tip - half of 96px */
                             }}
                         >
-                            <div className="absolute inset-0 rounded-full border border-white/20" />
-                            <span className="font-display text-2xl text-golden-200">S&S</span>
+                            <img src={sunSealImg} alt="Seal" className="w-full h-full object-contain drop-shadow-lg" />
+                            <span className="absolute font-display text-2xl font-bold text-violet-700 drop-shadow-sm pt-1">S&S</span>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
