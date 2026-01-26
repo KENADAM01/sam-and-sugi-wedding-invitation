@@ -35,7 +35,6 @@ const Location = () => {
                     </div>
                     <div className="text-center mt-8 mb-4 animate-fadeIn">
                         <h3 className="font-heading text-3xl text-rapunzel-600 mb-3">{reception.placeName}</h3>
-                        <p className="text-gray-600 text-lg max-w-lg mx-auto leading-relaxed">{reception.address}</p>
                         <a
                             href={`https://maps.google.com/?q=${encodeURIComponent(reception.placeName + ' ' + reception.address)}`}
                             target="_blank"
