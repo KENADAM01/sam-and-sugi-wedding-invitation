@@ -17,11 +17,11 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
         console.log("Envelope clicked!");
         setIsOpen(true);
 
-        // Wait for flap to open, then zoom out the letter
+        // Wait for flap to open fully (700ms transition), then zoom out the letter
         setTimeout(() => {
             setIsZooming(true);
 
-            // Wait for user to see the zoomed letter, then fade everything
+            // Hold the zoomed image for a bit
             setTimeout(() => {
                 setIsFullyOpen(true);
 
@@ -29,8 +29,8 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                 setTimeout(() => {
                     onOpen();
                 }, 1000);
-            }, 2500);
-        }, 600);
+            }, 3000); // Increased hold time
+        }, 800); // Increased wait for flap
     };
 
     if (isFullyOpen && false) return null;
@@ -40,17 +40,6 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
             className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000 ${isFullyOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
             style={{ backgroundImage: `url(${envelopeBg})` }}
         >
-            {/* Zooming Poster Overlay */}
-            <div
-                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-1000 ease-in-out ${isZooming ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-[20vh] pointer-events-none'}`}
-            >
-                <img
-                    src={tangledPoster}
-                    alt="Wedding Poster"
-                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
-                />
-            </div>
-
             <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective ${isFullyOpen ? 'translate-y-[100vh]' : ''} ${isZooming ? 'opacity-0' : 'opacity-100'}`}>
 
                 {/* Envelope Container */}
@@ -86,7 +75,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
                             onClick={handleOpen}
-                            className={`absolute left-1/2 -translate-x-1/2 w-36 h-36 z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            className={`absolute left-1/2 -translate-x-1/2 w-36 h-36 !z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                             style={{
                                 top: 'var(--flap-height)',
                                 marginTop: '-72px' /* Center on the tip - half of 144px */
@@ -106,6 +95,17 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         </button>
                     </div>
                 </div>
+            </div>
+
+            {/* Zooming Poster Overlay - Moved to end */}
+            <div
+                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-1000 ease-in-out ${isZooming ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-[20vh] pointer-events-none'}`}
+            >
+                <img
+                    src={tangledPoster}
+                    alt="Wedding Poster"
+                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
+                />
             </div>
         </div>
     );
