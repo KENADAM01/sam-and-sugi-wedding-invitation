@@ -12,8 +12,8 @@ const Hero = () => {
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
             {/* Character Images */}
-            {/* Rapunzel - Top Left */}
-            <div className={`absolute top-0 left-0 z-30 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 -translate-y-10'}`}>
+            {/* Rapunzel - Top Right */}
+            <div className={`absolute top-0 right-0 z-50 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
@@ -21,8 +21,8 @@ const Hero = () => {
                 />
             </div>
 
-            {/* Flynn - Bottom Right */}
-            <div className={`absolute bottom-0 right-0 z-30 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 translate-y-10'}`}>
+            {/* Flynn - Bottom Left */}
+            <div className={`absolute bottom-0 left-0 z-50 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
                 <img
                     src={flynnImg}
                     alt="Flynn Rider"
