@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import envelopeBg from '../assets/envelope-bg-new.jpg';
+import envelopeBg from '../assets/envelope-background.png';
 import tangledPoster from '../assets/tangled-poster.png';
+import envelopeInside from '../assets/envelope-inside.jpg';
 import maximusPascalImg from '../assets/maximus-pascal.png';
 
 import sunSealImg from '../assets/sun-seal.png';
@@ -54,7 +55,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     {/* Letter / Inside Content (Preview) */}
                     <div
                         className="absolute inset-2 top-4 bg-white shadow-sm flex flex-col items-center justify-center p-4 text-center border border-golden-100 bg-contain bg-no-repeat bg-center"
-                        style={{ backgroundImage: `url(${tangledPoster})` }}
+                        style={{ backgroundImage: `url(${envelopeInside})` }}
                     >
                     </div>
 
