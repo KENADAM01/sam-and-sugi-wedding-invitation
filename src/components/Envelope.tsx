@@ -36,7 +36,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
             className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000`}
             style={{ backgroundImage: `url(${envelopeBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
-            <div className={`relative w-[85vw] max-w-sm aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective`}>
+            <div className={`relative w-[90vw] max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective`}>
 
                 {/* Envelope Container */}
                 <div className="relative w-full h-full shadow-2xl">
@@ -74,10 +74,9 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
                             onClick={handleOpen}
-                            className={`absolute left-1/2 -translate-x-1/2 w-28 h-28 !z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            className={`absolute left-1/2 -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 -mt-12 md:-mt-16 !z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                             style={{
-                                top: 'var(--flap-height)',
-                                marginTop: '-56px' /* Center on the tip - half of 112px */
+                                top: 'var(--flap-height)'
                             }}
                         >
                             <img
@@ -86,7 +85,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                                 className="w-full h-full object-contain drop-shadow-2xl animate-pulse-slow"
                             />
                             <span
-                                className="absolute font-display text-3xl md:text-4xl font-bold drop-shadow-md pt-1"
+                                className="absolute font-display text-2xl md:text-4xl font-bold drop-shadow-md pt-1"
                                 style={{ color: '#ffffff' }}
                             >
                                 S&S
