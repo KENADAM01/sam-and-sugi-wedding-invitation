@@ -35,12 +35,12 @@ const Hero = () => {
             {/* Subtle Texture Overlay */}
             <div className="absolute inset-0 opacity-20 bg-white z-0 pointer-events-none" />
 
-            {/* Floating Lanterns - Violet Theme */}
+            {/* Floating Lanterns - Yellow Theme */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-40">
                 {[...Array(6)].map((_, i) => (
                     <div
                         key={i}
-                        className="absolute bottom-0 w-6 h-8 bg-gradient-to-b from-violet-300 via-violet-400 to-violet-500 rounded-lg opacity-70 shadow-lg"
+                        className="absolute bottom-0 w-6 h-8 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 rounded-lg opacity-70 shadow-lg"
                         style={{
                             left: `${(i + 1) * 15}%`,
                             animationDelay: `${i * 1.5}s`,
@@ -49,9 +49,9 @@ const Hero = () => {
                         }}
                     >
                         {/* Lantern top */}
-                        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-1.5 bg-violet-600 rounded-t-lg" />
+                        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-1.5 bg-yellow-600 rounded-t-lg" />
                         {/* Lantern glow */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-violet-200/40 to-violet-100/20 rounded-lg animate-pulse" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-yellow-200/40 to-yellow-100/20 rounded-lg animate-pulse" />
                     </div>
                 ))}
             </div>
