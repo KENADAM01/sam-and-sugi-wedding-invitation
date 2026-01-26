@@ -71,7 +71,7 @@ const Hero = () => {
                         &
                     </span>
                     <span className="inline-block animate-fadeInScale" style={{ animationDelay: '0.7s' }}>
-                        Sugithra
+                        Sugirtha
                     </span>
                 </h1>
 
