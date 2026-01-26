@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import envelopeBg from '../assets/envelope-bg.jpg';
 import tangledPoster from '../assets/tangled-poster.png';
+import maximusPascalImg from '../assets/maximus-pascal.png';
 
 import sunSealImg from '../assets/sun-seal.png';
 
@@ -95,6 +96,15 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         </button>
                     </div>
                 </div>
+            </div>
+
+            {/* Maximus & Pascal - Center Right Edge */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-48 md:w-72 lg:w-96">
+                <img
+                    src={maximusPascalImg}
+                    alt="Maximus and Pascal"
+                    className="w-full h-auto object-contain drop-shadow-xl"
+                />
             </div>
 
             {/* Zooming Poster Overlay - Moved to end */}
