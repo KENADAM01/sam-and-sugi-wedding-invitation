@@ -19,7 +19,7 @@ const Hero = () => {
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
-                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500 mix-blend-multiply"
                 />
             </div>
 
