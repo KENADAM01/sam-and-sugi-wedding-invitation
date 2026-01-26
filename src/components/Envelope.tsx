@@ -87,7 +87,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             />
                             <span
                                 className="absolute font-display text-3xl md:text-4xl font-bold drop-shadow-md pt-1"
-                                style={{ color: '#D6C8FF' }}
+                                style={{ color: '#ffffff' }}
                             >
                                 S&S
                             </span>
