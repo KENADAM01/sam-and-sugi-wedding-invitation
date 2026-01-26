@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import watercolorBg from '../assets/watercolor-bg.jpg';
-import coupleImg from '../assets/couple-illustration.png';
+import envelopeBg from '../assets/envelope-bg.jpg';
+import tangledPoster from '../assets/tangled-poster.png';
 
 import sunSealImg from '../assets/sun-seal.png';
 
@@ -28,7 +28,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
     return (
         <div
             className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-all duration-1000 ${isFullyOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
-            style={{ backgroundImage: `url(${watercolorBg})` }}
+            style={{ backgroundImage: `url(${envelopeBg})` }}
         >
             <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective ${isFullyOpen ? 'translate-y-[100vh]' : ''}`}>
 
@@ -37,19 +37,19 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
 
                     {/* Back of Envelope */}
                     <div
-                        className="absolute inset-0 bg-ivory rounded-sm"
+                        className="absolute inset-0 bg-white rounded-sm"
                     />
 
                     {/* Letter / Inside Content (Preview) */}
                     <div
                         className="absolute inset-2 top-4 bg-white shadow-sm flex flex-col items-center justify-center p-4 text-center border border-golden-100 bg-contain bg-no-repeat bg-center"
-                        style={{ backgroundImage: `url(${coupleImg})` }}
+                        style={{ backgroundImage: `url(${tangledPoster})` }}
                     >
                     </div>
 
                     <div className="absolute inset-0 z-10 overflow-hidden rounded-sm pointer-events-none">
                         <div
-                            className="pocket-shape shadow-md"
+                            className="pocket-shape shadow-md bg-white"
                         />
                     </div>
 
@@ -59,16 +59,16 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         style={{ transformStyle: 'preserve-3d' }}
                     >
                         <div
-                            className="flap-top drop-shadow-md"
+                            className="flap-top drop-shadow-md bg-white border-b border-gray-100"
                         />
 
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
                             onClick={handleOpen}
-                            className={`absolute left-1/2 -translate-x-1/2 w-28 h-28 z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            className={`absolute left-1/2 -translate-x-1/2 w-36 h-36 z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                             style={{
-                                top: 'var(--flap-height)', /* Position at the bottom of the flap height */
-                                marginTop: '-56px' /* Center on the tip - half of 112px */
+                                top: 'var(--flap-height)',
+                                marginTop: '-72px' /* Center on the tip - half of 144px */
                             }}
                         >
                             <img
@@ -77,7 +77,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                                 className="w-full h-full object-contain drop-shadow-2xl animate-pulse-slow"
                             />
                             <span
-                                className="absolute font-display text-3xl md:text-4xl font-bold drop-shadow-md pt-1"
+                                className="absolute font-display text-4xl md:text-5xl font-bold drop-shadow-md pt-1"
                                 style={{ color: '#7c3aed' }}
                             >
                                 S&S

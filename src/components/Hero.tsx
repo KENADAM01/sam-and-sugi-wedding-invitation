@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import rapunzelImg from '../assets/rapunzel.png'
 import flynnImg from '../assets/flynn.png'
+import maximusPascalImg from '../assets/maximus-pascal.png'
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -27,6 +28,15 @@ const Hero = () => {
                     src={flynnImg}
                     alt="Flynn Rider"
                     className="w-full h-auto object-contain object-left-bottom drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+            </div>
+
+            {/* Maximus & Pascal - Center Right Edge */}
+            <div className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-40 md:w-64 lg:w-80 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
+                <img
+                    src={maximusPascalImg}
+                    alt="Maximus and Pascal"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
             </div>
 
