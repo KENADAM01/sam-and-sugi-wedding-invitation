@@ -13,7 +13,7 @@ const Hero = () => {
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
             {/* Character Images */}
             {/* Rapunzel - Top Right */}
-            <div className={`absolute top-0 right-0 z-50 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
+            <div className={`absolute top-0 right-0 z-50 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
 
             {/* Flynn - Bottom Left */}
-            <div className={`absolute bottom-0 left-0 z-50 w-32 md:w-48 lg:w-64 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
+            <div className={`absolute bottom-0 left-0 z-50 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
                 <img
                     src={flynnImg}
                     alt="Flynn Rider"
@@ -57,13 +57,13 @@ const Hero = () => {
             </div>
 
             {/* Hero Content */}
-            <div className={`relative z-20 text-center text-rapunzel-900 px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            <div className={`relative z-20 text-center text-rapunzel-900 px-4 -mt-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
-                <p className="text-sm md:text-base tracking-[4px] uppercase mb-4 font-light opacity-95">
+                <p className="text-sm md:text-base tracking-[4px] uppercase mb-6 font-light opacity-95">
                     Save the Date
                 </p>
 
-                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-8 text-shadow-soft text-rapunzel-600">
+                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-6 text-shadow-soft text-rapunzel-600">
                     <span className="inline-block animate-fadeInScale" style={{ animationDelay: '0.3s' }}>
                         Samraj
                     </span>
@@ -75,7 +75,7 @@ const Hero = () => {
                     </span>
                 </h1>
 
-                <p className="font-heading text-2xl md:text-4xl font-light tracking-wider mt-8">
+                <p className="font-heading text-2xl md:text-4xl font-light tracking-wider mt-6">
                     6th March 2026
                 </p>
 
