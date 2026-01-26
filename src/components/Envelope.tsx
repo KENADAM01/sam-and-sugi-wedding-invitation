@@ -98,7 +98,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
 
             {/* Zooming Poster Overlay */}
             <div
-                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white transition-all duration-700 ease-in-out ${isZooming ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'}`}
+                className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-700 ease-in-out ${isZooming ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'}`}
             >
                 <img
                     src={tangledPoster}
