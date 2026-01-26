@@ -15,7 +15,7 @@ const Hero = () => {
             {/* Character Images */}
 
             {/* Rapunzel - Top Right */}
-            <div className={`absolute top-0 right-0 z-10 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
+            <div className={`absolute top-0 right-0 z-10 w-44 md:w-80 lg:w-[450px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
 
             {/* Flynn - Bottom Left */}
-            <div className={`absolute bottom-0 -left-8 md:left-0 z-10 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
+            <div className={`absolute bottom-0 -left-4 md:left-0 z-10 w-44 md:w-80 lg:w-[450px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
                 <img
                     src={flynnImg}
                     alt="Flynn Rider"
