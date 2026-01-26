@@ -65,14 +65,23 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
                             onClick={handleOpen}
-                            className={`absolute left-1/2 -translate-x-1/2 w-24 h-24 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            className={`absolute left-1/2 -translate-x-1/2 w-28 h-28 z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                             style={{
                                 top: 'var(--flap-height)', /* Position at the bottom of the flap height */
-                                marginTop: '-48px' /* Center on the tip - half of 96px */
+                                marginTop: '-56px' /* Center on the tip - half of 112px */
                             }}
                         >
-                            <img src={sunSealImg} alt="Seal" className="w-full h-full object-contain drop-shadow-lg" />
-                            <span className="absolute font-display text-2xl font-bold text-violet-700 drop-shadow-sm pt-1">S&S</span>
+                            <img
+                                src={sunSealImg}
+                                alt="Open Invitation"
+                                className="w-full h-full object-contain drop-shadow-2xl animate-pulse-slow"
+                            />
+                            <span
+                                className="absolute font-display text-2xl md:text-3xl font-bold drop-shadow-md pt-1"
+                                style={{ color: '#7c3aed' }}
+                            >
+                                S&S
+                            </span>
                         </button>
                     </div>
                 </div>
