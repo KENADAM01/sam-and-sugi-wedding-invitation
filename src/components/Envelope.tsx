@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import envelopeBg from '../assets/envelope-bg.jpg';
+import envelopeBg from '../assets/envelope-bg-new.jpg';
 import tangledPoster from '../assets/tangled-poster.png';
 import maximusPascalImg from '../assets/maximus-pascal.png';
 
