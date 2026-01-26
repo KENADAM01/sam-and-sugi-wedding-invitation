@@ -4,8 +4,8 @@ const EventDetails = () => {
             icon: '💒',
             title: 'Ceremony',
             time: '4:30 PM',
-            location: "",
-            
+            location: "Carmel Tower Church",
+            address: "No.8, Sivan Garden, Carmel Tower Cross Road, N. Washermenpet"
         },
         {
             icon: '🥂',
