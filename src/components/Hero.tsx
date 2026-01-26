@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import rapunzelImg from '../assets/rapunzel.png'
-import flynnImg from '../assets/flynn.png'
+import weddingPoster from '../assets/wedding-poster.jpg'
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -11,22 +10,12 @@ const Hero = () => {
 
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
-            {/* Character Images */}
-            {/* Rapunzel - Top Right */}
-            <div className={`absolute top-0 right-0 z-30 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
+            {/* Wedding Poster Image */}
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-64 md:w-96 lg:w-[500px] transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <img
-                    src={rapunzelImg}
-                    alt="Rapunzel and Pascal"
-                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
-                />
-            </div>
-
-            {/* Flynn - Bottom Left */}
-            <div className={`absolute bottom-0 -left-8 md:left-0 z-10 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
-                <img
-                    src={flynnImg}
-                    alt="Flynn Rider"
-                    className="w-full h-auto object-contain object-left-bottom drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                    src={weddingPoster}
+                    alt="Wedding of Samraj & Sugirtha"
+                    className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-lg"
                 />
             </div>
 
