@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import envelopeBg from '../assets/envelope-bg-final.jpg';
 import tangledPoster from '../assets/tangled-poster-new.jpg';
-import sunSealImg from '../assets/sun-seal.png';
+import sunSealImg from '../assets/sun-seal-new.png';
 
 interface EnvelopeProps {
     onOpen: () => void;
@@ -87,7 +87,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             />
                             <span
                                 className="absolute font-display text-3xl md:text-4xl font-bold drop-shadow-md pt-1"
-                                style={{ color: '#7c3aed' }}
+                                style={{ color: '#D6C8FF' }}
                             >
                                 S&S
                             </span>
