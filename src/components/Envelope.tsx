@@ -34,7 +34,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
     return (
         <div
             className={`fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center transition-opacity duration-1000`}
-            style={{ backgroundImage: `url(${envelopeBg})` }}
+            style={{ backgroundImage: `url(${envelopeBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <div className={`relative w-[90vw] max-w-md aspect-[1.4/1] transition-transform duration-1000 ease-in-out envelope-perspective`}>
 
@@ -43,7 +43,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
 
                     {/* Back of Envelope */}
                     <div
-                        className="absolute inset-0 rounded-sm"
+                        className="absolute inset-0 rounded-xl"
                         style={{ backgroundColor: '#9582BE' }}
                     />
 
@@ -53,7 +53,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                     >
                     </div>
 
-                    <div className="absolute inset-0 z-10 overflow-hidden rounded-sm pointer-events-none">
+                    <div className="absolute inset-0 z-10 overflow-hidden rounded-xl pointer-events-none">
                         <div
                             className="pocket-shape shadow-md"
                             style={{ backgroundColor: '#9582BE' }}
