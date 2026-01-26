@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import rapunzelImg from '../assets/rapunzel-new.png'
+import rapunzelImg from '../assets/rapunzel.png'
 import flynnImg from '../assets/flynn-new.png'
 
 
@@ -19,7 +19,7 @@ const Hero = () => {
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
-                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500 mix-blend-multiply"
+                    className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
             </div>
 
