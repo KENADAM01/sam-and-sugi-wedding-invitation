@@ -13,7 +13,7 @@ const Hero = () => {
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-rapunzel-50 to-rapunzel-100">
             {/* Character Images */}
             {/* Rapunzel - Top Right */}
-            <div className={`absolute top-0 right-0 z-50 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
+            <div className={`absolute top-0 right-0 z-10 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-10 -translate-y-10'}`}>
                 <img
                     src={rapunzelImg}
                     alt="Rapunzel and Pascal"
@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
 
             {/* Flynn - Bottom Left */}
-            <div className={`absolute bottom-0 left-0 z-50 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
+            <div className={`absolute bottom-0 left-0 z-10 w-48 md:w-72 lg:w-96 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-10 translate-y-10'}`}>
                 <img
                     src={flynnImg}
                     alt="Flynn Rider"
@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/40 z-10" />
 
             {/* Floating Lanterns */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-30">
                 {[...Array(8)].map((_, i) => (
                     <div
                         key={i}

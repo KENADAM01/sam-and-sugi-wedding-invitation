@@ -2,7 +2,6 @@ const Location = () => {
     const reception = {
         label: 'Reception',
         placeName: 'Thiruvottiyur Nadar Marriage Mahal',
-        address: '575X+6PP, S Mada St, Tirumala Avenue, Tiruvottiyur, Chennai, Tamil Nadu 600019',
         mapUrl: 'https://maps.google.com/maps?q=Thiruvottiyur+Nadar+Marriage+Mahal&t=&z=15&ie=UTF8&iwloc=&output=embed'
     }
 
