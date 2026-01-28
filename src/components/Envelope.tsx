@@ -73,7 +73,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             preserveAspectRatio="none"
                         >
                             <path
-                                d="M0,0 L100,0 L50,50 Z"
+                                d="M1.5,0 L98.5,0 L50,50 Z"
                                 fill="#D6C8FF"
                                 stroke="#D6C8FF"
                                 strokeWidth="3"
