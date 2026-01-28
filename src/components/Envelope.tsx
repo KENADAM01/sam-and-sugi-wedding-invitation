@@ -66,22 +66,25 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                         className={`absolute left-0 right-0 z-20 flex justify-center origin-top transition-transform duration-500 ease-in-out ${isOpen ? '[transform:rotateX(180deg)]' : ''}`}
                         style={{ transformStyle: 'preserve-3d', top: '-1px' }}
                     >
-                        <svg
-                            className="w-full drop-shadow-md filter"
-                            style={{ height: 'var(--flap-height)', overflow: 'visible' }}
-                            viewBox="0 0 100 50"
-                            preserveAspectRatio="none"
-                        >
-                            <path
-                                d="M2.5,0 L97.5,0 L50,50 Z"
-                                fill="#D6C8FF"
-                                stroke="#D6C8FF"
-                                strokeWidth="2"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
+                        {/* Flap Wrapper with Clipping for Rounded Corners */}
+                        <div className="w-full overflow-hidden rounded-t-xl shadow-sm">
+                            <svg
+                                className="w-full filter block"
+                                style={{ height: 'var(--flap-height)' }}
+                                viewBox="0 0 100 50"
+                                preserveAspectRatio="none"
+                            >
+                                <path
+                                    d="M0,0 L100,0 L50,50 Z"
+                                    fill="#D6C8FF"
+                                    stroke="#D6C8FF"
+                                    strokeWidth="2"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </div>
 
-                        {/* Wax Seal - Moved outside to escape clip-path */}
+                        {/* Wax Seal - Outside the wrapper to avoid clipping */}
                         <button
                             onClick={handleOpen}
                             className={`absolute left-1/2 -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 -mt-12 md:-mt-16 !z-50 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
