@@ -62,11 +62,11 @@ const Hero = () => {
                     Save the Date
                 </p>
 
-                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-4 text-violet-700 drop-shadow-sm flex flex-col items-center gap-1 md:gap-4">
+                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-4 text-violet-700 drop-shadow-sm flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4">
                     <span className="animate-fadeInScale" style={{ animationDelay: '0.3s' }}>
                         Samraj
                     </span>
-                    <span className="text-4xl md:text-6xl animate-fadeInScale text-violet-500 my-2" style={{ animationDelay: '0.5s' }}>
+                    <span className="text-4xl md:text-7xl md:text-8xl animate-fadeInScale text-violet-500 my-2 md:my-0 md:mx-4" style={{ animationDelay: '0.5s' }}>
                         &
                     </span>
                     <span className="animate-fadeInScale" style={{ animationDelay: '0.7s' }}>
