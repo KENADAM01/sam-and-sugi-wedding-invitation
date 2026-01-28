@@ -29,7 +29,7 @@ const EventDetails = () => {
                     </span>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
                     {details.map((detail, index) => (
                         <div
                             key={index}
