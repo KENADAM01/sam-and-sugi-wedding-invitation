@@ -63,13 +63,23 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
 
                     {/* Top Flap (The Lid) */}
                     <div
-                        className={`absolute top-0 left-0 right-0 z-20 flex justify-center origin-top transition-transform duration-500 ease-in-out ${isOpen ? '[transform:rotateX(180deg)]' : ''}`}
-                        style={{ transformStyle: 'preserve-3d' }}
+                        className={`absolute left-0 right-0 z-20 flex justify-center origin-top transition-transform duration-500 ease-in-out ${isOpen ? '[transform:rotateX(180deg)]' : ''}`}
+                        style={{ transformStyle: 'preserve-3d', top: '-1px' }}
                     >
-                        <div
-                            className="flap-top drop-shadow-md border-b border-purple-300"
-                            style={{ backgroundColor: '#D6C8FF' }}
-                        />
+                        <svg
+                            className="w-full drop-shadow-md filter"
+                            style={{ height: 'var(--flap-height)', overflow: 'visible' }}
+                            viewBox="0 0 100 50"
+                            preserveAspectRatio="none"
+                        >
+                            <path
+                                d="M0,0 L100,0 L50,50 Z"
+                                fill="#D6C8FF"
+                                stroke="#D6C8FF"
+                                strokeWidth="3"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
 
                         {/* Wax Seal - Moved outside to escape clip-path */}
                         <button
