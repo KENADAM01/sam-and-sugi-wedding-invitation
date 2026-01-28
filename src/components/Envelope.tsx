@@ -73,10 +73,10 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             preserveAspectRatio="none"
                         >
                             <path
-                                d="M1.5,0 L98.5,0 L50,50 Z"
+                                d="M2.5,0 L97.5,0 L50,50 Z"
                                 fill="#D6C8FF"
                                 stroke="#D6C8FF"
-                                strokeWidth="3"
+                                strokeWidth="2"
                                 strokeLinejoin="round"
                             />
                         </svg>
