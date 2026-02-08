@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import weddingVideo from '../assets/tangled-wedding.mp4'
 
 interface TimeLeft {
     days: number
@@ -77,7 +78,7 @@ const Countdown = () => {
                             playsInline
                             className="w-full h-full object-cover"
                             // Replace with your actual video source
-                            src="https://cdn.pixabay.com/video/2020/04/18/36485-416892540_large.mp4"
+                            src={weddingVideo}
                         >
                             Your browser does not support the video tag.
                         </video>
