@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
 
             {/* Hero Content */}
-            <div className={`relative z-50 text-center px-4 py-8 mb-32 md:mb-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`relative z-50 text-center px-4 py-8 mb-32 max-[465px]:mb-48 md:mb-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <p className="text-sm md:text-base tracking-[4px] uppercase mb-3 font-light text-violet-600">
                     Save the Date
                 </p>

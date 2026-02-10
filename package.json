@@ -2,6 +2,7 @@
   "name": "wedding-invitation",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://KENADAM01.github.io/sam-and-sugi-wedding-invitation",
   "type": "module",
   "scripts": {
     "dev": "vite",

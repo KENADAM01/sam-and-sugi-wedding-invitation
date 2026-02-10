@@ -98,7 +98,7 @@ const Countdown = () => {
                             onClick={() => setIsFinished(true)}
                             className="text-sm md:text-base text-white border border-white/40 px-6 py-2 rounded-full uppercase tracking-widest hover:bg-white/10 transition-all shadow-lg hover:scale-105 mb-4"
                         >
-                            Preview Video
+                            Always & forever
                         </button>
 
                         <div className="flex flex-col items-center -mt-2">
