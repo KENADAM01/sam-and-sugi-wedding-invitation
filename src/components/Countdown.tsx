@@ -93,13 +93,37 @@ const Countdown = () => {
                 )}
 
                 {!isFinished && (
-                    <div className="mt-12 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <div className="mt-12 flex flex-col items-center justify-center gap-2">
                         <button
                             onClick={() => setIsFinished(true)}
-                            className="text-xs text-white/50 hover:text-white border border-white/20 px-3 py-1 rounded-full uppercase tracking-widest hover:bg-white/10 transition-colors"
+                            className="text-sm md:text-base text-white border border-white/40 px-6 py-2 rounded-full uppercase tracking-widest hover:bg-white/10 transition-all shadow-lg hover:scale-105 mb-4"
                         >
                             Preview Video
                         </button>
+
+                        <div className="flex flex-col items-center -mt-2">
+                            {/* Arrow pointing up */}
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="text-yellow-400 animate-bounce mb-1 drop-shadow-md"
+                            >
+                                <path
+                                    d="M12 5L12 19M12 5L6 11M12 5L18 11"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+
+                            <span className="bg-gradient-to-r from-yellow-300 via-orange-400 to-orange-500 bg-clip-text text-transparent font-display text-2xl md:text-3xl font-bold drop-shadow-sm tracking-wider">
+                                Click Here
+                            </span>
+                        </div>
                     </div>
                 )}
             </div>

@@ -105,6 +105,36 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
                             </span>
                         </button>
                     </div>
+
+                    {/* Click/Touch Instruction - Positioned below the seal */}
+                    <div
+                        className={`absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center transition-opacity duration-300 z-40 ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                        style={{
+                            top: 'calc(var(--flap-height) + 70px)', // Positioned below the seal
+                        }}
+                    >
+                        {/* Arrow pointing up */}
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="text-yellow-400 animate-bounce mb-1 drop-shadow-md"
+                        >
+                            <path
+                                d="M12 5L12 19M12 5L6 11M12 5L18 11"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+
+                        <span className="bg-gradient-to-r from-yellow-300 via-orange-400 to-orange-500 bg-clip-text text-transparent font-display text-2xl md:text-3xl font-bold drop-shadow-sm tracking-wider">
+                            Click Here
+                        </span>
+                    </div>
                 </div>
             </div>
 

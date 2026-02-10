@@ -57,12 +57,12 @@ const Hero = () => {
             </div>
 
             {/* Hero Content */}
-            <div className={`relative z-50 text-center px-4 py-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`relative z-50 text-center px-4 py-8 mb-32 md:mb-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <p className="text-sm md:text-base tracking-[4px] uppercase mb-3 font-light text-violet-600">
                     Save the Date
                 </p>
 
-                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-4 text-violet-700 drop-shadow-sm flex flex-col min-[447px]:flex-row items-center justify-center gap-1 min-[447px]:gap-4">
+                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl mb-8 md:mb-4 text-violet-700 drop-shadow-sm flex flex-col min-[447px]:flex-row items-center justify-center gap-1 min-[447px]:gap-4">
                     <span className="animate-fadeInScale" style={{ animationDelay: '0.3s' }}>
                         Samraj
                     </span>
@@ -86,7 +86,7 @@ const Hero = () => {
 
             {/* Scroll Indicator */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center z-20 animate-fadeInUp" style={{ animationDelay: '1.5s' }}>
-                <span className="text-xs tracking-[2px] uppercase block mb-2 opacity-70 text-violet-600">
+                <span className="text-sm md:text-base tracking-[3px] uppercase block mb-2 font-bold text-violet-600 drop-shadow-sm">
                     Scroll to Explore
                 </span>
                 <div className="text-2xl animate-bounce text-violet-500">↓</div>
